@@ -1,0 +1,76 @@
+📌 API Endpoints for Social Media App
+1️⃣ Authentication APIs (User Signup/Login)
+Method	Endpoint	Description
+POST	/api/auth/register	Register a new user
+POST	/api/auth/login	Authenticate user & return JWT token
+GET	/api/auth/user	Get logged-in user details
+PUT	/api/auth/update	Update user profile
+DELETE	/api/auth/delete	Delete user account
+
+2️⃣ User Management APIs (Profile, Followers, Search)
+Method	Endpoint	Description
+GET	/api/users/:id	Get user profile by ID
+GET	/api/users	Get a list of all users
+PUT	/api/users/:id/follow	Follow another user
+PUT	/api/users/:id/unfollow	Unfollow a user
+GET	/api/users/search?query=xyz	Search users by name/username
+PUT	/api/users/:id/update	Update user profile information
+DELETE	/api/users/:id	Delete user profile
+
+3️⃣ Posts APIs (Create, Retrieve, Like, Comment)
+Method	Endpoint	Description
+POST	/api/posts	Create a new post
+GET	/api/posts	Get all posts (News Feed)
+GET	/api/posts/:id	Get a single post by ID
+DELETE	/api/posts/:id	Delete a post by ID
+PUT	/api/posts/:id/like	Like/Unlike a post
+POST	/api/posts/:id/comment	Add a comment to a post
+GET	/api/posts/:id/comments	Get comments on a post
+
+4️⃣ Comments APIs
+Method	Endpoint	Description
+POST	/api/comments/:postId	Add a comment to a post
+GET	/api/comments/:postId	Fetch all comments on a post
+DELETE	/api/comments/:commentId	Delete a specific comment
+
+5️⃣ Messaging APIs (Direct Chat)
+Method	Endpoint	Description
+POST	/api/messages	Send a new message
+GET	/api/messages/:conversationId	Get all messages in a conversation
+GET	/api/messages/users/:userId	Get chat history with a specific user
+
+6️⃣ Notifications APIs
+Method	Endpoint	Description
+GET	/api/notifications	Get all notifications for a user
+PUT	/api/notifications/read/:id	Mark a notification as read
+DELETE	/api/notifications/:id	Delete a notification
+
+7️⃣ Feed APIs (Home & Friends' Posts)
+Method	Endpoint	Description
+GET	/api/feed	Get posts from followed users
+GET	/api/feed/trending	Get trending posts
+
+8️⃣ Friend Requests & Connections
+Method	Endpoint	Description
+POST	/api/friends/request/:id	Send a friend request
+PUT	/api/friends/accept/:id	Accept a friend request
+DELETE	/api/friends/reject/:id	Reject a friend request
+DELETE	/api/friends/remove/:id	Remove a friend
+
+9️⃣ Admin APIs
+Method	Endpoint	Description
+GET	/api/admin/users	Get all registered users
+DELETE	/api/admin/users/:id	Delete a user (Admin Only)
+GET	/api/admin/reports	View reported content
+DELETE	/api/admin/posts/:id	Delete a reported post
+
+📌 Summary of API Categories
+Authentication APIs – User login, signup, JWT authentication
+User APIs – Fetch, update, follow/unfollow, search users
+Post APIs – Create, delete, like, comment on posts
+Comment APIs – Add, fetch, delete comments
+Messaging APIs – Direct messages between users
+Notifications APIs – Fetch & manage notifications
+Feed APIs – Retrieve posts from followed users
+Friend Request APIs – Manage friendships
+Admin APIs – User management & content moderation
